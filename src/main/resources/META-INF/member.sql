@@ -1,0 +1,1 @@
+insert into member(name, age, hometown) values ('Nguyễn Trường Sinh', 22, 'Ngãi');

@@ -7,7 +7,7 @@ import javax.ejb.Stateless;
 import com.axonactive.common.GenericServices;
 
 @Stateless
-public class MemberService extends GenericServices<MemberEntity, Member>{
+public class MemberService extends GenericServices<MemberEntity, MemberBOM>{
 
 	public MemberService() {
 		super(MemberEntity.class);
@@ -20,14 +20,14 @@ public class MemberService extends GenericServices<MemberEntity, Member>{
 
 	
 	@Override
-	public MemberEntity toEntity(Member bom) {
+	public MemberEntity toEntity(MemberBOM bom) {
 		return new MemberEntity(0, bom.getName(), bom.getAge(), bom.getHometown());
 	}
 
 	@Override
-	public Member toBom(MemberEntity entity) {
+	public MemberBOM toBom(MemberEntity entity) {
 		if (entity != null) {
-			Member emp = new Member(entity.getName(), entity.getAge(), entity.getHometown());
+			MemberBOM emp = new MemberBOM(entity.getName(), entity.getAge(), entity.getHometown());
 			return emp;
 		}
 		return null;

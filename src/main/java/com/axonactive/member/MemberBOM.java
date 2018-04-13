@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 
-public class Member implements Serializable{
+public class MemberBOM implements Serializable{
 
 	private String name;
 	
@@ -12,12 +12,12 @@ public class Member implements Serializable{
 		return name;
 	}
 
-	public Member() {
+	public MemberBOM() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Member(String name, int age, String hometown) {
+	public MemberBOM(String name, int age, String hometown) {
 		super();
 		this.name = name;
 		this.age = age;

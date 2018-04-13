@@ -19,13 +19,13 @@ public class MemberRest {
 	
 	@GET
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public List<Member> readAll(){
+	public List<MemberBOM> readAll(){
 		return memberService.toBoms(memberService.readAll());
 	}
 	
 	@POST
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public void save(Member member){
-		 memberService.save(memberService.toEntity(member));
+	public void save(MemberBOM memberBOM){
+		 memberService.save(memberService.toEntity(memberBOM));
 	}
 }

@@ -22,4 +22,9 @@ public class MemberBean implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public String submit() {
+		System.out.println(this.name);
+		return "welcome";
+	}
 }

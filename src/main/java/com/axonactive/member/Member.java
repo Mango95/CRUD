@@ -1,4 +1,4 @@
-package com.axonactive.crudmember;
+package com.axonactive.member;
 
 import java.io.Serializable;
 

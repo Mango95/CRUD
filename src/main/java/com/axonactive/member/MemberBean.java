@@ -25,6 +25,7 @@ public class MemberBean implements Serializable {
 	
 	public String submit() {
 		System.out.println(this.name);
+		memberService.save(memberService.toEntity(new MemberBOM(name, 33, "ABC")));
 		return "welcome";
 	}
 }

@@ -13,20 +13,20 @@
 	<ui:composition template="template/template.xhtml">
 		<ui:define name="content">
 			
-			<p:dataTable var="member" value="#{memberBean.members}" id="list_member">
-				<p:column headerText="Id">
-					<h:outputText value="#{member.memberid}" />
+			<p:dataTable var="member" value="#{memberBean.members}" id="list_member" rowIndexVar="count">
+				<p:column headerText="No" >
+					<h:outputText value="#{count + 1}" />
 				</p:column>
 
-				<p:column headerText="Year">
+				<p:column headerText="Name">
 					<h:outputText value="#{member.name}" />
 				</p:column>
 
-				<p:column headerText="Brand">
+				<p:column headerText="Age">
 					<h:outputText value="#{member.age}" />
 				</p:column>
 
-				<p:column headerText="Color">
+				<p:column headerText="Hometown">
 					<h:outputText value="#{member.hometown}" />
 				</p:column>
 			</p:dataTable>

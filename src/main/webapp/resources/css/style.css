@@ -1,8 +1,9 @@
 #list_member{
-	width: 700px;
+	width: 900px;
 	margin: 0 auto;
 }
 
 #list_member td{
 	color: red;
+	text-align: center;
 }

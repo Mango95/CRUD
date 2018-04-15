@@ -12,8 +12,9 @@
 <h:body bgcolor="white">
 	<ui:composition template="template/template.xhtml">
 		<ui:define name="content">
-			
-			<p:dataTable var="member" value="#{memberBean.members}" id="list_member" rowIndexVar="count">
+			<p:link outcome="insert.xhtml" value="Add">
+			</p:link>
+			<p:dataTable var="member" value="#{memberListBean.members}" tableStyle="width:auto" styleClass="myTable" rowIndexVar="count">
 				<p:column headerText="No" >
 					<h:outputText value="#{count + 1}" />
 				</p:column>

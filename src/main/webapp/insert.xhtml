@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<title>JSF 2.2 Hello World</title>
@@ -12,7 +13,22 @@
 <h:body>
 	<ui:composition template="template/template.xhtml">
 		<ui:define name="content">
-			<h2>This is my own content</h2>
+		<h:form>
+			<h:panelGrid columns="2" cellpadding="5">
+			 <h:outputText value="Name: " />
+			 <p:inputText value="#{memberBean.memberBOM.name}"/>
+			 
+			 <h:outputText value="Age: " />
+			 <p:inputNumber  minValue="1" maxValue="1000" value="#{memberBean.memberBOM.age}">  
+               </p:inputNumber>
+			 
+			 <h:outputText value="Hometown: " />
+			 <p:inputText value="#{memberBean.memberBOM.hometown}"/>
+			 
+			 <p:commandButton ajax="false" value="Add" action="#{memberBean.insert()}" styleClass="ui-priority-primary" />
+			
+			</h:panelGrid>
+			</h:form>
 		</ui:define>
 	</ui:composition>
 </h:body>

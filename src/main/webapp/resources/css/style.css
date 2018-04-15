@@ -1,9 +1,14 @@
-#list_member{
-	width: 900px;
-	margin: 0 auto;
-}
 
-#list_member td{
-	color: red;
+.myTable table{
+	margin: 0 auto;
 	text-align: center;
 }
+.myTable tbody td{
+    padding: 7px 20px;
+}
+.myTable table th{
+	color: green;
+	border: green 1px solid;
+	background-color: bisque; 
+}
+

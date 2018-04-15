@@ -12,8 +12,8 @@
 <h:body bgcolor="white">
 	<ui:composition template="template/template.xhtml">
 		<ui:define name="content">
-			<p:link outcome="insert.xhtml" value="Add">
-			</p:link>
+			<p:button outcome="insert.xhtml" value="Add">
+			</p:button>
 			<p:dataTable var="member" value="#{memberListBean.members}" tableStyle="width:auto" styleClass="myTable" rowIndexVar="count">
 				<p:column headerText="No" >
 					<h:outputText value="#{count + 1}" />

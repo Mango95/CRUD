@@ -1,0 +1,8 @@
+#list_member{
+	width: 700px;
+	margin: 0 auto;
+}
+
+#list_member td{
+	color: red;
+}

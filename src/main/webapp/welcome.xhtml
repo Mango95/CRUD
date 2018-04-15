@@ -8,12 +8,12 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
-	<title>JSF 2.2 Hello World</title>
 </h:head>
 <h:body bgcolor="white">
 	<ui:composition template="template/template.xhtml">
 		<ui:define name="content">
-			<p:dataTable var="member" value="#{memberBean.members}">
+			
+			<p:dataTable var="member" value="#{memberBean.members}" id="list_member">
 				<p:column headerText="Id">
 					<h:outputText value="#{member.memberid}" />
 				</p:column>

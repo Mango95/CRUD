@@ -5,6 +5,8 @@
 		<properties>
 			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/> <!-- (drop) and create table automatically -->
 			<property name="javax.persistence.sql-load-script-source" value="META-INF/member.sql" />
+			<property name="hibernate.show_sql" value="true"></property>
+			
 		</properties>
 	</persistence-unit>
 </persistence>

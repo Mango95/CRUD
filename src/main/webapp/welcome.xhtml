@@ -3,13 +3,34 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
 
-	<h:head>
-		<title>JSF 2.2 Hello World</title>
-	</h:head>
-	<h:body bgcolor="white">
-		<h3>Thử nghiệm</h3>
-		<h4>Welcome <h:outputText value="#{memberBean.name}" /></h4>
-	</h:body>
+<h:head>
+	<title>JSF 2.2 Hello World</title>
+</h:head>
+<h:body bgcolor="white">
+	<ui:composition template="template/template.xhtml">
+		<ui:define name="content">
+			<p:dataTable var="member" value="#{memberBean.members}">
+				<p:column headerText="Id">
+					<h:outputText value="#{member.memberid}" />
+				</p:column>
+
+				<p:column headerText="Year">
+					<h:outputText value="#{member.name}" />
+				</p:column>
+
+				<p:column headerText="Brand">
+					<h:outputText value="#{member.age}" />
+				</p:column>
+
+				<p:column headerText="Color">
+					<h:outputText value="#{member.hometown}" />
+				</p:column>
+			</p:dataTable>
+		</ui:define>
+	</ui:composition>
+</h:body>
 </html>

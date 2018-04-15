@@ -27,7 +27,7 @@ public class MemberService extends GenericServices<MemberEntity, MemberBOM>{
 	@Override
 	public MemberBOM toBom(MemberEntity entity) {
 		if (entity != null) {
-			MemberBOM emp = new MemberBOM(entity.getName(), entity.getAge(), entity.getHometown());
+			MemberBOM emp = new MemberBOM(entity.getId(), entity.getName(), entity.getAge(), entity.getHometown());
 			return emp;
 		}
 		return null;
